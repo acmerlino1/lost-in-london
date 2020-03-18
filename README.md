@@ -1,25 +1,53 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An app to help discover new places to visit in London based on the users interests. A user can post recommendations, categories them, and search through all listed places.
 
-Things you may want to cover:
+## Installing and Database creation
+
+git clone this repo
+
+```
+$ gem install bundle
+$ bundle
+$ gem install rake
+$ rake db:create
+$ rake db:migrate
+$ rails server
+```
+
+Open your browser and start the server at localhost:3000
+
+## Live on Heroku
 
 - Ruby version
   Ruby 2.6.3
 
 - System dependencies
 
-- Configuration
+## How to run the test suite
 
-- Database creation
+```
+$ rspec
+```
 
-- Database initialization
+## User stories
 
-- How to run the test suite
+```
+As a user
+So I can find somewhere to go in London
+I want to see all listed places
+```
 
-- Services (job queues, cache servers, search engines, etc.)
+```
+As a user
+So I can recommend my favourite places
+I want to be able to list a place to visit
+```
+
+```
+As a user
+So I can only look at places I'm interested in
+I want to be able to view places by category
+```
 
 - Deployment instructions
-
-- ...
