@@ -10,6 +10,9 @@
     "vue-loader": "^15.9.0",
     "vue-template-compiler": "^2.6.11"
   },
+  "scripts": {
+    "heroku-prebuild": "npm install --dev"
+  },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.10.3"
