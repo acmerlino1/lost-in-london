@@ -11,6 +11,7 @@ module LostInLondon
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.action_controller.include_all_helpers = false
+    config.assets.initialize_on_precompile = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
