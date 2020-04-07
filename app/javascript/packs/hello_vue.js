@@ -25,7 +25,8 @@
 // Add <%= javascript_pack_tag 'hello_vue' %> to your layout
 // Then add this markup to your html template:
 //
-<div id="hello">
+
+/* <div id="hello">
   {{ message }}
   <app></app>
 </div>;
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     components: { App }
   });
-});
+}); */
 
 //
 //
@@ -51,20 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
 //
 // Then uncomment the code block below:
 //
-// import TurbolinksAdapter from 'vue-turbolinks'
-// import Vue from 'vue/dist/vue.esm'
-// import App from '../app.vue'
-//
-// Vue.use(TurbolinksAdapter)
-//
-// document.addEventListener('turbolinks:load', () => {
+// import TurbolinksAdapter from "vue-turbolinks";
+// import Vue from "vue/dist/vue.esm";
+// import App from "../app.vue";
+
+// Vue.use(TurbolinksAdapter);
+
+// document.addEventListener("turbolinks:load", () => {
 //   const app = new Vue({
-//     el: '#hello',
+//     el: "#hello",
 //     data: () => {
 //       return {
-//         message: "Can you say hello?"
-//       }
+//         message: "Can you say hello?",
+//       };
 //     },
-//     components: { App }
-//   })
-// })
+//     components: { App },
+//   });
+// });
