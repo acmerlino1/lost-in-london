@@ -12,8 +12,11 @@ gem 'faker'
 gem 'headless'
 gem 'jquery-rails'
 gem 'poltergeist'
+gem 'popper'
 gem 'rspec-rails', '~> 3.6'
 gem 'rails-controller-testing'
+gem 'simplecov', require: false
+gem 'simplecov-console', require: false
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
