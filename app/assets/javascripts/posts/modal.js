@@ -1,6 +1,6 @@
 $(document).on("turbolinks:load", function() {
   // when a post is clicked, show its full content in a modal window
-  $("body").click(".single-post-card, .single-post-list", function() {
+  $("body").on("click", ".single-post-card, .single-post-list", function() {
     var posted_by = $(this)
       .find(".post-content .posted-by")
       .html();
