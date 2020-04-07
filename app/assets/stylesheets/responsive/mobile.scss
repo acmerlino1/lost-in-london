@@ -1,9 +1,9 @@
-@media screen and (min-width: 767px) {
-  // #side-menu {
-  //   display: none;
-  // }
-  .mobile-menu {
-    display: none !important;
+@media screen and (max-width: 767px) {
+  #side-menu {
+    display: none;
+  }
+  .pc-menu {
+    display: inherit !important;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -12,5 +12,11 @@
     .post-text {
       font-size: 16px;
     }
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1000px) {
+  .container {
+    width: 100% !important;
   }
 }
