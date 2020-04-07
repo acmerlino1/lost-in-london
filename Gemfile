@@ -1,38 +1,33 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
 ruby '2.6.3'
 
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'bootstrap_form'
-gem 'database_cleaner'
-gem 'devise'
-gem 'factory_bot_rails'
-gem 'faker'
-gem 'headless'
-gem 'jquery-rails'
-gem 'poltergeist'
-gem 'popper'
-gem 'rspec-rails', '~> 3.6'
-gem 'rails-controller-testing'
-gem 'simplecov', require: false
-gem 'simplecov-console', require: false
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'devise'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap_form'
 gem 'sass-rails', '>= 6'
+gem 'jquery-rails'
+gem 'autoprefixer-rails'
+#Use Uglifier as compressor for JavaScript runtimes
+gem 'uglifier', '>= 1.3.0'
+gem 'faker'
+
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+gem 'gon'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -47,6 +42,15 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'headless'
+  gem 'poltergeist'
+  gem 'popper'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'rails-controller-testing'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
 end
 
 group :development do

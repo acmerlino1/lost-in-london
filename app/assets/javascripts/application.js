@@ -1,6 +1,6 @@
 //= require jquery
-//= require bootstrap-sprockets
+//= require jquery_ujs
 //= require turbolinks
+//= require bootstrap/dropdown
+//= require bootstrap-sprockets
 //= require_tree .
-
-console.log("application.js file");
