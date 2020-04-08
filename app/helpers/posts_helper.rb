@@ -19,4 +19,12 @@ module PostsHelper
   def no_posts_partial_path
     @posts.empty? ? 'posts/branch/no_posts' : 'shared/empty_partial'
   end
+
+  def category_field_partial_path
+    if params[:category].present?
+      'post/branch/search_form/category_field'
+    else
+      'shared/empty_partial'
+    end
+  end
 end
