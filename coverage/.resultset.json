@@ -20,24 +20,29 @@
           null
         ]
       },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/post.rb": {
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/posts_helper.rb": {
         "lines": [
           1,
+          null,
           1,
+          2,
           1,
-          null
-        ]
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/category.rb": {
-        "lines": [
+          null,
           1,
+          null,
+          null,
+          null,
           1,
-          null
-        ]
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/controllers/application_controller.rb": {
-        "lines": [
+          2,
           1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -55,50 +60,35 @@
           1,
           null,
           1,
-          2,
+          0,
           0,
           null,
-          2,
+          0,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/controllers/pages_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/pages_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/controllers/posts_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/posts_helper.rb": {
-        "lines": [
-          1,
           null
         ]
       },
       "/Users/chrisdavidmerlino/Projects/lost-in-london/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/category.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/post.rb": {
         "lines": [
           0,
           0,
@@ -115,6 +105,55 @@
           null,
           null,
           null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/controllers/pages_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/controllers/posts_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
           null,
           0
         ],
@@ -147,6 +186,14 @@
         "branches": {
         }
       },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/pages_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/Users/chrisdavidmerlino/Projects/lost-in-london/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
@@ -168,6 +215,6 @@
         }
       }
     },
-    "timestamp": 1586285023
+    "timestamp": 1586359189
   }
 }
