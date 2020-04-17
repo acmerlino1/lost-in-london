@@ -22,7 +22,7 @@ module PostsHelper
 
   def category_field_partial_path
     if params[:category].present?
-      'post/branch/search_form/category_field'
+      'posts/branch/search_form/category_field'
     else
       'shared/empty_partial'
     end
