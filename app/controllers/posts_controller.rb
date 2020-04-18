@@ -8,6 +8,9 @@ class PostsController < ApplicationController
     post_for_branch(params[:action])
   end
 
+  def new
+  end
+
   private
 
   def post_for_branch(branch)
