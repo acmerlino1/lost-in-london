@@ -1,15 +1,5 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the PostsHelper. For example:
-#
-# describe PostsHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe PostsHelper, type: :helper do
   
   context '#create_new_post_partial' do
@@ -56,6 +46,24 @@ RSpec.describe PostsHelper, type: :helper do
       assign(:posts, [1])
       expect(helper.no_posts_partial_path).to (
         eq 'shared/empty_partial'
+      )
+    end
+  end
+
+  context '#update_pagination_partial_path' do
+    it 'returns an update_pagination partials path' do
+      posts = double('posts', :next_page => 2)
+      assign(:posts, posts)
+      expect(helper.update_pagination_partial_path).to(
+        eq 'posts/posts_pagination_page/update_pagination'
+      )
+    end
+
+    it 'returns a remove_pagination partial path' do
+      posts = double('posts', :next_page => nil)
+      assign(:posts, posts)
+      expect(helper.update_pagination_partial_path).to(
+        eq 'posts/posts_pagination_page/remove_pagination'
       )
     end
   end

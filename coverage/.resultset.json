@@ -20,37 +20,107 @@
           null
         ]
       },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/post.rb": {
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/posts_helper.rb": {
         "lines": [
           1,
-          1,
-          1,
-          null,
-          43,
           null,
           1,
+          2,
           1,
           null,
-          null,
-          1,
           1,
           null,
           null,
+          null,
           1,
-          4,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
           null,
           null
         ]
       },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/category.rb": {
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null,
           1,
+          1,
+          null
+        ]
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/navigation_helper.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
           null
         ]
       },
       "/Users/chrisdavidmerlino/Projects/lost-in-london/app/mailers/application_mailer.rb": {
         "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/category.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/models/post.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
           0,
           0,
           0,
@@ -111,13 +181,16 @@
           0,
           0,
           0,
-          null,
           0,
           0,
           0,
           0,
           null,
           0,
+          0,
+          0,
+          0,
+          null,
           0,
           0,
           0,
@@ -160,71 +233,8 @@
         "branches": {
         }
       },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/navigation_helper.rb": {
-        "lines": [
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/pages_helper.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/posts_helper.rb": {
-        "lines": [
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/chrisdavidmerlino/Projects/lost-in-london/app/helpers/application_helper.rb": {
-        "lines": [
-          0,
-          null,
-          0,
           0,
           0
         ],
@@ -252,6 +262,6 @@
         }
       }
     },
-    "timestamp": 1587124057
+    "timestamp": 1587222586
   }
 }
