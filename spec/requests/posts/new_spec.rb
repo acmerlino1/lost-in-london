@@ -1,4 +1,5 @@
 require 'rails_helper'
+# Warden::Test::Helpers allows use of login_as method
 include Warden::Test::Helpers
 
 RSpec.describe "new", :type => :request do
