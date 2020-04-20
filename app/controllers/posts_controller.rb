@@ -1,4 +1,8 @@
+require './app/services/posts_for_branch_service'
+
 class PostsController < ApplicationController
+
+  before_action :redirect_if_not_signed_in, only: [:new]
 
   def show
     @post = Post.find(params[:id])
@@ -35,11 +39,11 @@ class PostsController < ApplicationController
   end
 
   def get_posts
-   PostsForBranchService.new({
-    branch: params[:action],
-    search: params[:search],
-    category: params[:category]
-   }).call
+    PostsForBranchService.new({
+      search: params[:search],
+      branch: params[:action],
+      category: params[:category]
+    }).call
   end
 
 end
