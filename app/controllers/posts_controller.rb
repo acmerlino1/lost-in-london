@@ -9,9 +9,21 @@ class PostsController < ApplicationController
   end
 
   def new
+    @categories = Category.all
+  end
+
+  def create
+    @post = Post.new(post_params)
+
+    @post.save
+    redirect_to interest_posts_path
   end
 
   private
+
+  def post_params
+    params.require(:post).permit(:title, :content, :category_id)
+  end
 
   def post_for_branch(branch)
     @categories = Category.where(branch: branch)
