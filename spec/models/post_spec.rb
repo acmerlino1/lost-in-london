@@ -47,4 +47,54 @@ RSpec.describe Post, type: :model do
       expect(Post.search('great')[0].id).to eq post.id
     end
   end
+
+  context 'Validations' do
+    before(:each) do
+      @post = create(:post, title: 'awesome title', content: 'great content' * 5)
+    end
+
+    it 'creates post successfully' do
+      expect(@post).to be_valid
+    end
+
+    it 'is not valid without a category' do
+      @post.category_id = nil
+      expect(@post).not_to be_valid
+    end
+
+    it 'is not valid without a title' do
+      @post.title = nil
+      expect(@post).not_to be_valid
+    end
+
+    it 'is not valid without a user_id' do
+      @post.user_id = nil
+      expect(@post).not_to be_valid
+    end
+
+    it 'is not valid if title is less than 5 characters' do
+      @post.title = 'a' * 4
+      expect(@post).not_to be_valid
+    end
+
+    it 'is not valid if title is longer than 255 characters' do
+      @post.title = 'a' * 260
+      expect(@post).not_to be_valid
+    end
+
+    it 'is not valid with no content' do
+      @post.content = nil
+      expect(@post).not_to be_valid
+    end
+
+     it 'is not valid with content less than 20 characters' do
+       @post.content = 'a * 10'
+       expect(@post).not_to be_valid
+     end
+
+     it 'is not valid if content is greater than 1000 chracters' do
+       @post.content = 'a' * 1001
+       expect(@post).not_to be_valid
+     end
+  end
 end
