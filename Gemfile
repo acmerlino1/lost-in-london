@@ -17,6 +17,7 @@ gem 'bootstrap_form'
 gem 'sass-rails', '>= 6'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
+gem 'will_paginate', '~> 3.1.0'
 #Use Uglifier as compressor for JavaScript runtimes
 gem 'uglifier', '>= 1.3.0'
 gem 'faker'

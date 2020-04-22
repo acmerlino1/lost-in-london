@@ -1,0 +1,21 @@
+
+<%= bootstrap_form_for :post, url: posts_path do |f| %>
+
+  <%= f.text_field :title,
+                    class: 'form-control',
+                    placeholder: 'Title',
+                    required: true,
+                    minlength: 5,
+                    maxlength: 100 %>
+
+  <%= f.text_area :content,
+                  required: true,
+                  minlength: 20,
+                  maxlength: 1000,
+                  placeholder: 'Write a description or relevant information.',
+                  class: 'form-control' %>
+                  
+  <%= f.collection_select :category_id, @categories, :id, :name, class: 'form-control' %>
+
+  <%= f.submit "Create post", class: 'form-control' %>
+  <% end %>
