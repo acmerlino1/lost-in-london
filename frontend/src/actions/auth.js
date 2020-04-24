@@ -74,8 +74,8 @@ export const loginUser = () => (dispatch) => {
     .signInWithPopup(provider)
     .then(function (result) {
       dispatch(receiveLogin(result));
-      var token = result.credential.accessToken;
-      var user = result.user;
+      // var token = result.credential.accessToken;
+      // var user = result.user;
     })
     .catch((error) => {
       dispatch(loginError());
