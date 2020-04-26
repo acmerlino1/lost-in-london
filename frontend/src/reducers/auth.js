@@ -33,7 +33,7 @@ export default (
         ...state,
         isLoggingIn: false,
         isAuthenticated: true,
-        user: action.user,
+        user: action.result.user,
       };
     case LOGIN_FAILURE:
       return {

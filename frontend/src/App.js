@@ -16,7 +16,7 @@ function App(props) {
         exact
         path="/"
         component={Home}
-        isAuthenitcated={isAuthenticated}
+        isAuthenticated={isAuthenticated}
         isVerifying={isVerifying}
       />
       <Route path="/login" component={Login} />
@@ -31,5 +31,4 @@ function mapStateToProps(state) {
   };
 }
 
-// export default App;
 export default connect(mapStateToProps)(App);

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
 const ProtectedRoute = ({
   component: Component,
-  isAuthenitcated,
+  isAuthenticated,
   isVerifying,
   ...rest
 }) => (
@@ -12,7 +12,7 @@ const ProtectedRoute = ({
     render={(props) =>
       isVerifying ? (
         <div />
-      ) : isAuthenitcated ? (
+      ) : isAuthenticated ? (
         <Component {...props} />
       ) : (
         <Redirect

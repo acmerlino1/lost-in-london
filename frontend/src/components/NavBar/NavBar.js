@@ -1,52 +1,58 @@
 import React, { Component } from "react";
-import LeftMenu from "./LeftMenu";
-import RightMenu from "./RightMenu";
-import { Drawer, Button } from "antd";
+import "./NavBar.css";
+import { Layout, Menu } from "antd";
+import { logoutUser } from "../../actions";
+import { connect } from "react-redux";
 
 class Navbar extends Component {
-  state = {
-    current: "mail",
-    visible: false,
-  };
-  showDrawer = () => {
-    this.setState({
-      visible: true,
-    });
-  };
   onClose = () => {
     this.setState({
       visible: false,
     });
   };
+
+  handleLogout = () => {
+    this.props.logoutUser();
+  };
+
   render() {
+    const button = this.props.isAuthenticated ? (
+      <Menu.Item
+        key="app"
+        onClick={this.handleLogout}
+        style={{ float: "right" }}
+      >
+        <span>Logout</span>
+      </Menu.Item>
+    ) : (
+      <Menu.Item key="mail" style={{ float: "right" }}>
+        <span>Signin</span>
+      </Menu.Item>
+    );
     return (
-      <nav className="menuBar">
-        <div className="logo">
-          <a href="">logo</a>
-        </div>
-        <div className="menuCon">
-          <div className="leftMenu">
-            <LeftMenu />
-          </div>
-          <div className="rightMenu">
-            <RightMenu />
-          </div>
-          <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
-            <span className="barsBtn"></span>
-          </Button>
-          <Drawer
-            title="Basic Drawer"
-            placement="right"
-            closable={false}
-            onClose={this.onClose}
-            visible={this.state.visible}
-          >
-            <LeftMenu />
-            <RightMenu />
-          </Drawer>
-        </div>
-      </nav>
+      <Layout.Header>
+        <div className="logo" />
+        <Menu mode="horizontal">
+          <Menu.Item key="mail">
+            <span>Home</span>
+          </Menu.Item>
+          <Menu.Item key="posts">
+            <span>Posts</span>
+          </Menu.Item>
+          <Menu.Item key="alipay">
+            <span>Contact Us</span>
+          </Menu.Item>
+          {button}
+        </Menu>
+      </Layout.Header>
     );
   }
 }
-export default Navbar;
+
+const mapStateToProps = (state) => {
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+  };
+};
+
+export default connect(mapStateToProps, { logoutUser })(Navbar);

@@ -7,13 +7,11 @@ import "antd/dist/antd.css";
 
 class Login extends Component {
   handleSubmit = () => {
-    const { dispatch } = this.props;
-
-    dispatch(loginUser());
+    this.props.loginUser();
   };
 
   render() {
-    const { classes, loginError, isAuthenticated } = this.props;
+    const { isAuthenticated } = this.props;
     if (isAuthenticated) {
       return <Redirect to="/" />;
     } else {
@@ -37,10 +35,8 @@ class Login extends Component {
 
 function mapStateToProps(state) {
   return {
-    isLoggingIn: state.auth.isLoggingIn,
-    loginError: state.auth.loginError,
     isAuthenticated: state.auth.isAuthenticated,
   };
 }
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps, { loginUser })(Login);
