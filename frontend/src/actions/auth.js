@@ -1,5 +1,6 @@
 import { myFirebase } from "../firebase/firebase";
 import firebase from "firebase/app";
+import wretch from "wretch";
 import "firebase/auth";
 import "firebase/firestore";
 
@@ -72,10 +73,8 @@ export const loginUser = () => (dispatch) => {
   myFirebase
     .auth()
     .signInWithPopup(provider)
-    .then(function (result) {
-      dispatch(receiveLogin(result));
-      // var token = result.credential.accessToken;
-      // var user = result.user;
+    .then((result) => {
+      dispatch(createUser(result));
     })
     .catch((error) => {
       dispatch(loginError());
@@ -103,4 +102,39 @@ export const verifyAuth = () => (dispatch) => {
     }
     dispatch(verifySuccess());
   });
+};
+
+const getCurrentUser = () => {
+  return myFirebase.auth().currentUser.getIdToken(false);
+};
+
+const firebaseAuthMiddleware = () => (next) => (url, opts) => {
+  return getCurrentUser().then(function (idToken) {
+    opts.headers["Authorization"] = "Bearer " + idToken;
+    return next(url, opts);
+  });
+};
+
+export const externalApi = wretch()
+  .url("http://localhost:4567")
+  .middlewares([firebaseAuthMiddleware()])
+  .options({
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  });
+
+export const createUser = (result) => (dispatch) => {
+  externalApi
+    .url("/users")
+    .post()
+    .res((response) => {
+      console.log(response);
+      dispatch(receiveLogin(result));
+    })
+    .catch((err) => {});
+  // dispatch(receiveLogin(result));
+  // var token = result.credential.accessToken;
+  // var user = result.user;
 };
