@@ -1,8 +1,17 @@
 import React, { Component } from "react";
+import { Card, Form, Input, Button } from "antd";
 import { connect } from "react-redux";
-import { Card, Form, Input, Button, Checkbox } from "antd";
+import { storeNewPost } from "../../actions/post";
+import { getAllPosts } from "../../actions/post";
 
 class CreatePost extends Component {
+  formRef = React.createRef();
+  savePost = (values) => {
+    this.props.storeNewPost(values.title, values.description, "Art");
+    this.props.getAllPosts();
+    this.formRef.current.resetFields();
+  };
+
   render() {
     return (
       <Card title="Create a post" style={{ width: "100%" }}>
@@ -11,6 +20,8 @@ class CreatePost extends Component {
           initialValues={{
             remember: true,
           }}
+          ref={this.formRef}
+          onFinish={this.savePost}
         >
           <Form.Item
             label="Title"
@@ -48,4 +59,4 @@ class CreatePost extends Component {
     );
   }
 }
-export default CreatePost;
+export default connect(null, { storeNewPost, getAllPosts })(CreatePost);
